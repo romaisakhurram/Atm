@@ -5,6 +5,7 @@ let Totalbalance = 10000;
 console.log("Your current balance is" + " "+ Totalbalance )
 
 const mypin= 1234;
+console.log(`yourpin code is ${mypin}`);
 
 let pinAnswer = await inquirer.prompt([
 
@@ -15,12 +16,7 @@ let pinAnswer = await inquirer.prompt([
 },
 ])
 
-// console.log(pinAnswer.pin)
-if (pinAnswer.pin === mypin) {
- console.log("You are correct pin code !!!");
-} else {
-console.log("Incorrect pin code");
-}
+//console.log(pinAnswer.pin)
 
 let  accountAnswer = await inquirer.prompt([
 {
@@ -78,4 +74,3 @@ else
     console.log("Insufficient balnce");
    }
 }
-

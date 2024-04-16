@@ -3,6 +3,7 @@ import inquirer from "inquirer";
 let Totalbalance = 10000;
 console.log("Your current balance is" + " " + Totalbalance);
 const mypin = 1234;
+console.log(`yourpin code is ${mypin}`);
 let pinAnswer = await inquirer.prompt([
     {
         name: "pin",
@@ -10,13 +11,7 @@ let pinAnswer = await inquirer.prompt([
         message: "Enter your pin number:"
     },
 ]);
-// console.log(pinAnswer.pin)
-if (pinAnswer.pin === mypin) {
-    console.log("You are correct pin code !!!");
-}
-else {
-    console.log("Incorrect pin code");
-}
+//console.log(pinAnswer.pin)
 let accountAnswer = await inquirer.prompt([
     {
         name: "accountType",
