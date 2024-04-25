@@ -3,7 +3,7 @@ import inquirer from "inquirer";
 let Totalbalance = 10000;
 console.log("Your current balance is" + " " + Totalbalance);
 const mypin = 1234;
-console.log(`yourpin code is ${mypin}`);
+console.log(` My pin code is ${mypin}`);
 let pinAnswer = await inquirer.prompt([
     {
         name: "pin",
