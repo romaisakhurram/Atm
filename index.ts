@@ -4,8 +4,6 @@ import inquirer from "inquirer";
 let Totalbalance = 10000;
 console.log("Your current balance is" + " "+ Totalbalance )
 
-console.log("My pin code is 1234 ");
-
 const mypin= 1234;
 console.log(` My pin code is ${mypin}`);
 
