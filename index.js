@@ -1,10 +1,13 @@
 #! /usr/bin/env node
-import inquirer from "inquirer";
-let Totalbalance = 10000;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var inquirer_1 = require("inquirer");
+var Totalbalance = 10000;
 console.log("Your current balance is" + " " + Totalbalance);
-const mypin = 1234;
-console.log(` My pin code is ${mypin}`);
-let pinAnswer = await inquirer.prompt([
+console.log("My pin code is 1234 ");
+var mypin = 1234;
+console.log(" My pin code is ".concat(mypin));
+var pinAnswer = await inquirer_1.default.prompt([
     {
         name: "pin",
         type: "number",
@@ -12,7 +15,7 @@ let pinAnswer = await inquirer.prompt([
     },
 ]);
 //console.log(pinAnswer.pin)
-let accountAnswer = await inquirer.prompt([
+var accountAnswer = await inquirer_1.default.prompt([
     {
         name: "accountType",
         type: "list",
@@ -27,7 +30,7 @@ let accountAnswer = await inquirer.prompt([
     },
 ]);
 if (accountAnswer.transactionMethod == "cash Withdrawl") {
-    let cashWithdrawlAmount = await inquirer.prompt([
+    var cashWithdrawlAmount = await inquirer_1.default.prompt([
         {
             name: "Withdrawl",
             type: "number",
@@ -37,14 +40,14 @@ if (accountAnswer.transactionMethod == "cash Withdrawl") {
     // greater than or equal to operator.
     if (Totalbalance >= cashWithdrawlAmount.Withdrawl) {
         Totalbalance -= cashWithdrawlAmount.Withdrawl; //totalbalance = totalbalnce - cashwithdrawlAmount
-        console.log(`Your total balnce is :${Totalbalance}`);
+        console.log("Your total balnce is :".concat(Totalbalance));
     }
     else {
         console.log("Insufficient balnce");
     }
 }
 else {
-    let FastcashAmount = await inquirer.prompt([
+    var FastcashAmount = await inquirer_1.default.prompt([
         {
             name: "fastCash",
             type: "list",
@@ -56,7 +59,7 @@ else {
     ]);
     if (Totalbalance >= FastcashAmount.fastCash) {
         Totalbalance -= FastcashAmount.fastCash; //totalbalance = totalbalnce - cashwithdrawlAmount
-        console.log(`Your total balnce is :${Totalbalance}`);
+        console.log("Your total balnce is :".concat(Totalbalance));
     }
     else {
         console.log("Insufficient balnce");
